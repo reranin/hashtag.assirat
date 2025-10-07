@@ -1,15 +1,47 @@
 # قناة الصراط الفضائية - Assirat TV
 
-A modern, responsive website for Assirat TV (قناة الصراط الفضائية), a religious Islamic television channel.
+A modern, responsive website for Assirat TV (قناة الصراط الفضائية), a religious Islamic television channel with user-generated content integration.
 
 ## Features
 
 - **Live Streaming**: Watch live TV stream with HLS support
 - **Program Schedule**: Daily program listings with Islamic calendar dates
+- **Hashtag Campaign**: User-generated content platform (#قناة_الصراط)
+- **Content Participation**: Users can contribute videos with official hashtags
 - **Responsive Design**: Mobile-first design that works on all devices
 - **Social Media Integration**: Links to various social media platforms
 - **Program Gallery**: Interactive gallery of TV programs and segments
 - **Multi-language Support**: Arabic interface with RTL support
+
+## Hashtag Campaign - هاشتاغ قناة الصراط
+
+The website now features a comprehensive user-generated content campaign that allows viewers to become active participants in content creation:
+
+### Official Hashtags
+- `#قناة_الصراط` - Main channel hashtag
+- `#assirattv` - Channel identifier
+- `#إنا_علی_العهد` - Commitment hashtag
+- `#وفقا_للمناسبات` - Occasion-based content
+
+### How It Works
+1. **Content Submission**: Users publish videos on social media with official hashtags
+2. **Content Review**: Channel team reviews and selects the best submissions
+3. **Professional Editing**: Selected videos are re-edited with channel graphics
+4. **Broadcast**: Final videos are aired on the channel with creator credits
+
+### Benefits for Participants
+- Become part of official channel content
+- Reach a wider audience
+- Discover and showcase talents
+- Build community engagement
+- Future partnership opportunities
+
+### Guidelines
+- Content must be original and owned by the creator
+- No offensive or inappropriate content
+- No unauthorized logos or branding
+- Channel reserves right to select/refuse content
+- Must use official hashtags for each occasion
 
 ## Technology Stack
 
@@ -68,13 +100,20 @@ Program schedules are managed through JSON files:
 - `programs2.json`: Contains program names, days, and times
 - `date.json`: Contains Islamic calendar date mappings
 
-## Social Media
+## Social Media & Hashtag Campaign
 
 The website includes links to:
 - Twitter: [@tvassirat](https://x.com/tvassirat)
 - Instagram: [@assirattv](https://www.instagram.com/assirattv)
 - WhatsApp: [assirattv.net/whatsapp](https://assirattv.net/whatsapp)
 - Telegram: [@tvassirat](https://t.me/tvassirat)
+
+### Hashtag Campaign Participation
+Users can participate in the hashtag campaign by:
+1. Creating original video content
+2. Publishing on social media with official hashtags
+3. Following community guidelines
+4. Engaging with the channel's content creation process
 
 ## Satellite Frequencies
 
