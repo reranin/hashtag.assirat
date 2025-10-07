@@ -1,0 +1,481 @@
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قناة الصراط الفضائية</title>
+    <meta name="Description" content="قناة الصراط الفضائية">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./assets/libs/web-player/web-player.component.js"></script>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"
+        onload="this.onload=null;this.removeAttribute('media');" type="text/css">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#e7e8ec" />
+
+<style>
+.swiper-card {
+    width: clamp(180px, 40vw, 230px);
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: block;
+    margin-left: 10px;
+}
+.cardIMG {
+    width: clamp(180px, 40vw, 230px);
+    height: auto;
+}
+</style>
+
+</head>
+
+<body class="select-none d-flex justify-content-center">
+    <div class="max-width">
+        <section id="header" class="container-fluid">
+            <div class="d-flex justify-content-center ">
+                <div class="z-index-1 row position-absolute d-flex align-items-center p-0 d-none d-sm-block col-auto" style="margin-top: clamp(1px, 2vw, 10px);width: clamp(100px, 90vw, 1144px);">
+                    <img loading="lazy" class="col-auto logo mb-1" src="assets/images/logo.webp">
+                    <a class="col-auto fw-bold text-decoration-none secondary headerFontSize mt-1" href="#frequencies">الترددات</a>
+                    <span class="main-color p-0">|</span>
+                    <a class="col-auto fw-bold text-decoration-none secondary headerFontSize mt-1" href="#applications">تحمیل التطبيق</a>
+                    <span class="main-color p-0">|</span>
+                    <a class="col-auto fw-bold text-decoration-none secondary headerFontSize mt-1" href="#socialNetworks ">التواصل الاجتماعي</a>
+                    <span class="main-color p-0">|</span>
+                    <a class="col-auto fw-bold text-decoration-none secondary headerFontSize mt-1" href="mailto:info@assirat.com.lb">تواصل معنا</a>
+                    <hr class="col-12" style="margin-top: clamp(2px, 1vw, 6px);margin-bottom: 1rem;border-top: 2px solid rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="row position-absolute d-flex align-items-center p-0 d-block d-sm-none col-auto w-100" style="margin-top:  clamp(1px, 7vw, 174px);">
+                    <img loading="lazy" class="col-12 m-0 p-0 z-index-2 " src="./assets/images/header.webp" style="height: calc(65vw/3.64);width: clamp(1px,100vw,2050px);object-fit: cover;max-height: 85px;position: fixed;">
+                    <img loading="lazy" class="col-auto logo z-index-3 position-fixed" src="assets/images/logo.webp">
+                    <div class="col-auto hamburger-menu z-index-4">
+                        <input id="menu__toggle" type="checkbox" class="d-none">
+                        <label class="menu__btn" for="menu__toggle">
+                            <span></span>
+                        </label>
+                        <div class="menu__box__Back"></div>
+                        <ul class="menu__box">
+                            <li><a class="menu__item headerFontSize " for="menu__toggle"
+                                    href="#frequencies">الترددات</a>
+                            </li>
+                            <li><a class="menu__item headerFontSize " for="menu__toggle" href="#applications">تحمیل
+                                    التطبيق</a></li>
+                            <li><a class="menu__item headerFontSize " for="menu__toggle" href="#socialNetworks">التواصل
+                                    الاجتماعي</a></li>
+                            <li><a class="menu__item headerFontSize " for="menu__toggle"
+                                    href="mailto:info@assirat.com.lb">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center" style="background-color: #ffffff;">
+                    <img loading="lazy" class="col-12 m-0 p-0" src="./assets/images/header.webp" style="height: calc(65vw/3.64);width: auto;object-fit: cover; max-height: 85px;">
+                    <img loading="lazy" class="col-12 m-0 p-0 z-index-1" src="./assets/images/tv.webp" style="height: 77vw;width: auto;object-fit: cover;max-height: 955px; pointer-events: none;">
+                    <!--<div class="position-absolute d-flex justify-content-center">-->
+                    <!--    <img loading="lazy" class="z-index-1" style="width: clamp(3px,calc(50vw /100),4.5px);height: clamp(2.5px,calc(40vw /100),4px);;margin-right: clamp(-80px,calc(21vw - 27vw ),-21px);margin-top: clamp(157px, calc(100vw - 44.9vw ),692px);pointer-events: none;" src="./assets/images/red dot.gif" ;>-->
+                    <!--</div>-->
+                    <div class="position-absolute d-flex justify-content-center">
+                        <div class="z-index-0" style="width: clamp(253px,calc(100vw - 22.2vw),964px);height: clamp(144px,calc(100vw - 55.7vw),546px);max-height: 546px;max-width: 964px;margin-top: clamp(55px,calc((65vw/3.64) + 0.2vw),87px);aspect-ratio: 16 / 9;overflow: hidden;">
+                        <eyevinn-video source="https://svs.itworkscdn.net/assiratvlive/assirat/playlist.m3u8" style="width: 100%;height: 100%;display: grid;direction: ltr;font-size: clamp(10px,3vw,20px);"></eyevinn-video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid p-0" id="todayProgramsSection" style="   clamp(-66px, -41vw, -27px);/* margin-bottom: clamp(72px, calc(21vw - 43vw), -85px); */width: clamp(100px, 87vw, 1083px);height: clamp(174px, calc(42vw), 224px);">
+<!--            <div class="position-absolute translate-middle d-flex justify-content-center" style="-->
+<!--    z-index: 3;-->
+<!--">-->
+<!--                        <img loading="lazy" class="" style="width: clamp(3px,calc(50vw /100),4.5px);height: clamp(2.5px,calc(40vw /100),4px);margin-left: clamp(-1008px,calc(7vw - 90vw ),-166px);/* margin-top: clamp(-78px, calc(10vw - 19vw ),-24px); */pointer-events: none;" src="./assets/images/red dot.gif" ;="">-->
+<!--                    </div>-->
+            <div class="container-fluid p-0" style="margin-top: clamp(-278px,calc(21vw - 43vw ),-66px);margin-bottom: clamp(72px, calc(21vw - 43vw), -85px);width:clamp(100px, 87vw, 1083px);">
+                <!-- Swiper -->
+                <div class="swiper cardSwiper mt-2">
+                    <div class="row ">
+                        <p class="col fw-bold m-0 bigFontSize mb-2" style="color: #555252;">تشاهدون الیوم</p>
+                    </div>
+                    <div class="swiper-wrapper " id="todayPrograms" style="height: auto;">
+                        <div class="swiper-slide swiper-card card-d1 text-center"><a class=" text-decoration-none">
+                            <div class=" d-flex justify-content-start align-items-center">
+                                <img loading="lazy" lazyload src="assets/images/tt.png" class=" image-r1 img-responsive round rounded-3 cardIMG">
+                                <div class="text-white fs-1 me-1 position-absolute timeOpacity ">   -- </div>
+                            </div>
+                            <p class="text-end secondary fw-bold mt-2 headerFontSize"></p>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--margin-top: clamp(-111px, calc(21vw - 45vw), -16px)-->
+        <section id="frequencies" class="container-fluid p-0 d-flex round rounded-5 align-items-center " style="width: clamp(100px, 87vw, 1083px);position: relative;min-height: 200px;z-index: 1;margin-top: 0px !important; -webkit-mask: linear-gradient(#000 0 0);">
+            <div class="row p-0 m-0 text-white text-center text-shadow2 py-2 justify-content-center">
+                <p class="col align-self-center fw-bold text-white bigFontSize text-center m-0 text-shadow2 mb-2" style="font-size: 2rem !important;">التردادت</p>
+                <div class="row m-0 text-white text-center  d-flex justify-content-center align-items-center p-0">
+                    <span class="col-12 col-sm-auto mainFontSize p-0">مدار النـــــــــــايــــــل سات 11603 أفقي</span>
+                    <span class="d-none d-sm-block col-sm-auto p-0 px-2">|</span>
+                    <span class="col-12 col-sm-auto mainFontSize p-0">معدل التـرميز 27500</span>
+                    <span class="d-none d-sm-block col-sm-auto p-0 px-2">|</span>
+                    <span class="col-12 col-sm-auto mainFontSize p-0">معدل التصحيح 7/8</span>
+                </div>
+                <hr class=" col-4 d-block d-sm-none my-2" style="border-top: 2px solid rgb(255, 255, 255);">
+                <div class="row m-0 text-white text-center  d-flex justify-content-center align-items-center p-0">
+                    <span class="col-12 col-sm-auto mainFontSize p-0">مدار جالاكسي 19/12177V عامودي</span>
+                    <span class="d-none d-sm-block col-sm-auto p-0 px-2">|</span>
+                    <span class="col-12 col-sm-auto mainFontSize p-0">معدل الترميز 23000</span>
+                    <span class="d-none d-sm-block col-sm-auto p-0 px-2">|</span>
+                    <span class="col-12 col-sm-auto mainFontSize p-0">معدل التصحيح 3/4</span>
+                </div>
+            </div>
+            <div class="parallax  " id="bg3" style="top: clamp(265.625px, calc(21vw - 43vw), -16px) !important;">
+            </div>
+        </section>
+
+        <section id="socialNetworks" class="container-fluid p-0 round rounded-5 section-margin" style="background-color: #f8f9fb;width: clamp(100px, 87vw, 1083px);; ">
+            <div class="row justify-content-center align-items-center m-0 justify-content-center align-items-center">
+                    <div class="row col-12 text-center my-3">
+                        <p class="col-12 fw-bold bigFont2XSize text-shadow1 main-color">التواصل الاجتماعي</p>
+                    
+                     
+                      <div class="col-12 d-flex justify-content-center justify-content-md-center p-0">
+                            <a class="m-2" href="https://x.com/tvassirat" target="_blank">
+                                <img loading="lazy" src="assets/images/t.png" style="width: clamp(15px,15vw,42px);">
+                            </a>
+                            <a class="m-2" href="https://www.instagram.com/assirattv" target="_blank">
+                                <img loading="lazy" src="assets/images/i.png" style="width: clamp(15px,15vw,42px);">
+                            </a>
+                             <a class="m-2" href="https://assirattv.net/whatsapp" target="_blank">
+                                <img loading="lazy" src="assets/images/w.png" style="width: clamp(15px,15vw,42px);">
+                            </a>
+                             <a class="m-2" href="https://t.me/tvassirat" target="_blank">
+                                <img loading="lazy" src="assets/images/tele.png" style="width: clamp(15px,15vw,42px);">
+                            </a>
+                        </div>
+                        
+                    </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="container-fluid p-0 section-margin" style="height:auto;overflow: hidden; object-fit: cover; width: clamp(100px, 87vw, 1083px);;">
+          
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="row m-0 d-flex justify-content-center align-items-center text-center" style="position: absolute;width: clamp(100px, 87vw, 1083px);;">
+                </div>
+                <video class="w-100  round rounded-5"   disableRemotePlayback playsinline  muted autoplay loop preload="auto" plays-inline>
+                    <source src="assets/video/Reel.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+
+
+
+        <section class="container-fluid p-0 section-margin" id="applications"
+            style="width: clamp(100px, 87vw, 1083px);;">
+            <div class="row justify-content-between m-0">
+                <div class="col-12 col-md-12 col-lg-5 row  mx-0 text-center round rounded-5 p-0 pt-4 mb-3 mb-lg-0" style="background-color: #f5f5f7;overflow: hidden;">
+                    <p class="col-12 fw-bold bigFontSize text-shadow1 mt-2">
+                       تطبیق قناة الصراط الفضائية</p>
+                      <p class="col-12 fw-bold mainFontSize text-shadow1 m-0">
+                        قریباً
+                    </p>
+                    <div class="d-flex justify-content-center m-0 p-0">
+                        <img loading="lazy" src="assets/images/assiratapp.png" style="width: clamp(280px, 100vw, 600px);">
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-5 row  mx-0 text-center round rounded-5 p-0 pt-4 mb-md-0" style="background-color: #f5f5f7;overflow: hidden;">
+
+                    <p class="col-12 fw-bold mainFontSize text-shadow1 mt-2">
+                  <a href="https://assirat24.com/Quran24/" style=" text-decoration: none; "><span style="color: #006c58;">قرآن 24</span></a>
+                        <span>|</span>
+                    <a href="https://assirat24.com/Ahkam24/" style=" text-decoration: none; "><span style="color: #2a17a3;">أحكام 24</span></a>
+                        <span>|</span>
+                     <a href="https://assirat24.com/Sireh24/" style=" text-decoration: none; "><span style="color: #f79025;">سيـــــرة 24</span></a>
+                    </p>
+                    <p class="col-12 fw-bold mainFontSize text-shadow1 m-0">
+                        <img loading="lazy" src="assets/images/download.png" alt="">تحمیل التطبيق
+                    </p>
+
+                    <div class="d-flex justify-content-center m-0 p-0">
+                        <img loading="lazy" src="assets/images/assirat24.png" style="width: clamp(280px, 100vw, 600px);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid p-0 round rounded-5 section-margin" style="background-color: #f8f9fb; width: clamp(100px, 87vw, 1083px);;overflow: hidden;">
+            <div class="m-0 pb-4 row d-flex justify-content-center align-items-center">
+                <div class="col-12 mt-5 mb-3">
+                   <p class="fw-bold bigFontSize text-center main-color">فواصل قناة الصراط الفضائية</p>
+                </div>
+                <div id="programs">
+                    <div class="photobanner">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(1).jpg" id="(1)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(2).jpg" id="(2)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(3).jpg" id="(3)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(4).jpg" id="(4)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(5).jpg" id="(5)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(6).jpg" id="(6)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(7).jpg" id="(7)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(8).jpg" id="(8)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(9).jpg" id="(9)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(10).jpg" id="(10)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(11).jpg" id="(11)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(12).jpg" id="(12)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(13).jpg" id="(13)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(14).jpg" id="(14)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(15).jpg" id="(15)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(16).jpg" id="(16)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(17).jpg" id="(17)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(18).jpg" id="(18)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(19).jpg" id="(19)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(20).jpg" id="(20)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(21).jpg" id="(21)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(22).jpg" id="(22)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(23).jpg" id="(23)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(24).jpg" id="(24)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(25).jpg" id="(25)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(78).jpg" id="(78)" onclick="showVideo(this.id)">
+                        
+                         <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(1).jpg" id="(1)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(2).jpg" id="(2)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(3).jpg" id="(3)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(4).jpg" id="(4)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(5).jpg" id="(5)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(6).jpg" id="(6)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(7).jpg" id="(7)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(8).jpg" id="(8)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(9).jpg" id="(9)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(10).jpg" id="(10)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(11).jpg" id="(11)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(12).jpg" id="(12)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(13).jpg" id="(13)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(14).jpg" id="(14)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(15).jpg" id="(15)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(16).jpg" id="(16)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(17).jpg" id="(17)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(18).jpg" id="(18)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(19).jpg" id="(19)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(20).jpg" id="(20)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(21).jpg" id="(21)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(22).jpg" id="(22)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(23).jpg" id="(23)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(24).jpg" id="(24)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(25).jpg" id="(25)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(78).jpg" id="(78)" onclick="showVideo(this.id)">
+                    </div>
+                </div>
+                <div id="programs">
+                    <div class="photobanner" style="animation-direction: reverse;">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(26).jpg" id="(26)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(27).jpg" id="(27)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(28).jpg" id="(28)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(29).jpg" id="(29)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(30).jpg" id="(30)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(31).jpg" id="(31)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(32).jpg" id="(32)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(33).jpg" id="(33)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(34).jpg" id="(34)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(35).jpg" id="(35)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(36).jpg" id="(36)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(37).jpg" id="(37)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(38).jpg" id="(38)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(39).jpg" id="(39)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(40).jpg" id="(40)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(41).jpg" id="(41)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(42).jpg" id="(42)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(43).jpg" id="(43)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(44).jpg" id="(44)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(45).jpg" id="(45)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(46).jpg" id="(46)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(47).jpg" id="(47)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(48).jpg" id="(48)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(49).jpg" id="(49)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(50).jpg" id="(50)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(77).jpg" id="(77)" onclick="showVideo(this.id)">
+                        
+                            <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(26).jpg" id="(26)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(27).jpg" id="(27)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(28).jpg" id="(28)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(29).jpg" id="(29)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(30).jpg" id="(30)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(31).jpg" id="(31)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(32).jpg" id="(32)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(33).jpg" id="(33)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(34).jpg" id="(34)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(35).jpg" id="(35)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(36).jpg" id="(36)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(37).jpg" id="(37)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(38).jpg" id="(38)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(39).jpg" id="(39)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(40).jpg" id="(40)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(41).jpg" id="(41)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(42).jpg" id="(42)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(43).jpg" id="(43)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(44).jpg" id="(44)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(45).jpg" id="(45)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(46).jpg" id="(46)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(47).jpg" id="(47)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(48).jpg" id="(48)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(49).jpg" id="(49)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(50).jpg" id="(50)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(77).jpg" id="(77)" onclick="showVideo(this.id)">
+                    </div>
+                </div>
+                <div id="programs">
+                    <div class="photobanner" >
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(51).jpg" id="(51)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(52).jpg" id="(52)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(53).jpg" id="(53)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(54).jpg" id="(54)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(55).jpg" id="(55)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(56).jpg" id="(56)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(57).jpg" id="(57)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(58).jpg" id="(58)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(59).jpg" id="(59)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(60).jpg" id="(60)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(61).jpg" id="(61)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(62).jpg" id="(62)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(63).jpg" id="(63)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(64).jpg" id="(64)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(65).jpg" id="(65)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(66).jpg" id="(66)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(67).jpg" id="(67)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(68).jpg" id="(68)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(69).jpg" id="(69)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(70).jpg" id="(70)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(71).jpg" id="(71)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(72).jpg" id="(72)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(73).jpg" id="(73)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(74).jpg" id="(74)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(75).jpg" id="(75)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(76).jpg" id="(76)" onclick="showVideo(this.id)">
+                        
+                          <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(51).jpg" id="(51)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(52).jpg" id="(52)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(53).jpg" id="(53)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(54).jpg" id="(54)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(55).jpg" id="(55)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(56).jpg" id="(56)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(57).jpg" id="(57)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(58).jpg" id="(58)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(59).jpg" id="(59)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(60).jpg" id="(60)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(61).jpg" id="(61)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(62).jpg" id="(62)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(63).jpg" id="(63)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(64).jpg" id="(64)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(65).jpg" id="(65)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(66).jpg" id="(66)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(67).jpg" id="(67)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(68).jpg" id="(68)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(69).jpg" id="(69)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(70).jpg" id="(70)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(71).jpg" id="(71)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(72).jpg" id="(72)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(73).jpg" id="(73)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(74).jpg" id="(74)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(75).jpg" id="(75)" onclick="showVideo(this.id)">
+                        <img loading="lazy" class="round rounded-3 cardIMG" src="assets/images/(76).jpg" id="(76)" onclick="showVideo(this.id)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" container-fluid p-0 section-margin" style="width: clamp(100px, 87vw, 1083px);;">
+            <div class=" row d-flex justify-content-center align-items-center p-0 z-index-1" style="margin-top: clamp(1px, 2vw, 30px); width: clamp(100px, 90vw, 1144px);">
+                <div class="row col-12 m-0">
+                    <div class="col-12 col-md-6">
+                        <img loading="lazy" class="col-auto" src="assets/images/logo.webp" style="width: calc(20vw);min-width: 40px;max-width: 85px; ">
+                        
+                        <p class="secondary headerFontSize p-0 ps-md-5  m-0 mb-3 ms-md-5" style="text-align: justify;text-justify: inter-word;">
+                            الصراط قناة إعلاميَّة دينية تسهم في نشر الإسلام المحمدي الأصيل، بمنهاج يتلاءم مع النظرة
+                            الإنسانية والمبني على السُنّن السليمة والقيم الدينية الأصيله والمفاهيم الإسلاميَّة الصحيحة.
+                        </p>
+
+                    </div>
+                    <div class="col-6 col-md-3  d-grid align-items-center">
+
+                        <a class="row text-decoration-none align-items-center secondary" href="https://assirattv.net/whatsapp" target="_blank">
+                            <div class="col-auto p-0 m-0 py-1">
+                                <img loading="lazy" src="assets/images/w.png" style="width: clamp(25px, 6vw, 30px);">
+                            </div>
+                            <p class="col-8 p-0 m-0 mx-1 headerFontSize">واتس آب</p>
+                        </a>
+                        <a class="row text-decoration-none align-items-center secondary" href="https://x.com/tvassirat" target="_blank">
+                            <div class="col-auto p-0 m-0 py-1">
+                                <img loading="lazy" src="assets/images/t.png" style="width: clamp(25px, 6vw, 30px);">
+                            </div>
+                            <p class="col-8 p-0 m-0 mx-1 headerFontSize">تويتر</p>
+                        </a>
+                        <a class="row text-decoration-none align-items-center secondary" href="https://www.instagram.com/assirattv" target="_blank">
+                            <div class="col-auto p-0 m-0 py-1">
+                                <img loading="lazy" src="assets/images/i.png" style="width: clamp(25px, 6vw, 30px);">
+                            </div>
+                            <p class="col-8 p-0 m-0 mx-1 headerFontSize">انستاغرام</p>
+                        </a>
+                        <a class="row text-decoration-none align-items-center secondary" href="https://t.me/tvassirat" target="_blank">
+                            <div class="col-auto p-0 m-0 py-1">
+                                <img loading="lazy" src="assets/images/tele.png" style="width: clamp(25px, 6vw, 30px);">
+                            </div>
+                            <p class="col-8 p-0 m-0 mx-1 headerFontSize">تلغرام</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 d-grid align-items-center">
+                        <a class="row text-decoration-none p-0 m-0 secondary headerFontSize" href="#frequencies">الترددات</a>
+                        <a class="row text-decoration-none p-0 m-0 secondary headerFontSize" href="#applications">تحمیل التطبيق</a>
+                        <a class="row text-decoration-none p-0 m-0 secondary headerFontSize" href="#socialNetworks">التواصل الاجتماعي</a>
+                        <a class="row text-decoration-none p-0 m-0 secondary headerFontSize" href="mailto:info@assirat.com.lb">تواصل معنا</a>
+                    </div>
+                </div>
+                <hr class="col-12" style="margin-top: clamp(2px, 1vw, 20px);margin-bottom: 1rem;border-top: 2px solid rgba(0, 0, 0, 0.1);">
+                <div class="row d-flex justify-content-center align-items-center m-0 my-2">
+                    <a class="col-auto" href="#header">
+                        <img loading="lazy" src="assets/images/arrow.png" style="width: clamp(15px,10vw,35px);">
+                    </a>
+                    
+                    
+                    
+                    
+                    <div class="row col d-sm-none d-block">
+<pre class="col-12 secondary m-0 p-0 text-start headerFontSize">جميع الحقوق محفوظة © 
+قناة الصراط الفضائية 2024
+</pre>
+    
+</div>
+                    
+                    
+                    <p class="col  d-sm-block d-none secondary m-0 text-start headerFontSize">جميع الحقوق محفوظة قناة الصراط الفضائية 2024 ©</p>
+                </div>
+            </div>
+        </section>
+    </div>
+  <div class="modal" id="Modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static" 
+                                            aria-labelledby="viewSelectedSurahsM" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                                <div class="modal-content">
+                                                   <div class="modal-header">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="stopVideo()"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                         <video class="popuptext" id="videop" style="width:100%;" controls autoplay>
+                                                            <source src="assets/video/Reel.mp4" type="video/mp4">
+                                                            </video>
+                                                            <img loading="lazy" src="" id="imagep" style="width:100%;">
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/jquery/jquery.min.js"></script>
+    <script src="./assets/libs/universal-parallax/universal-parallax.min.js"></script>
+    <script src="./assets/libs/init/init.js"></script>
+</body>
+</html>
