@@ -161,6 +161,9 @@ if (typeof universalParallax !== "undefined") {
   new universalParallax().init();
 }
 
+// Custom parallax effect for frequencies section - Disabled to prevent image distortion
+// Using CSS background-attachment: fixed instead for better performance
+
 // jQuery functions for mobile menu
 jQuery(function () {
   $(".menu__box__Back").click(function () {
