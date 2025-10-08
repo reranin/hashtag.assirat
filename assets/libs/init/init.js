@@ -28,8 +28,39 @@ function stopVideo() {
 }
 
 // Hamburger Menu Implementation
+// تابع تنظیم انیمیشن اولیه تصویر hashtag
+function initializeHashtagAnimation() {
+  const hashtagImg = document.querySelector(".hero-logo img");
+  if (hashtagImg) {
+    // تشخیص نوع دستگاه
+    const isMobile = window.innerWidth <= 768;
+    const isSmallMobile = window.innerWidth <= 480;
+    
+    // تعیین scale اولیه
+    let initialScale;
+    if (isSmallMobile) {
+      initialScale = 1.2;
+    } else if (isMobile) {
+      initialScale = 1.3;
+    } else {
+      initialScale = 1.8;
+    }
+    
+    // اعمال scale اولیه
+    hashtagImg.style.transform = `scale(${initialScale})`;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("🚀 Initializing hamburger menu...");
+  
+  // تنظیم انیمیشن اولیه
+  initializeHashtagAnimation();
+  
+  // تنظیم مجدد انیمیشن هنگام تغییر اندازه صفحه
+  window.addEventListener('resize', function() {
+    initializeHashtagAnimation();
+  });
 
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const navLinks = document.getElementById("nav-links");
@@ -135,6 +166,45 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
+    }
+
+    // انیمیشن تدریجی تصویر hashtag بر اساس میزان اسکرول
+    const hashtagImg = document.querySelector(".hero-logo img");
+    if (hashtagImg) {
+      const scrollY = window.scrollY;
+      const maxScroll = 200; // حداکثر اسکرول برای کامل شدن انیمیشن
+      
+      // تشخیص نوع دستگاه
+      const isMobile = window.innerWidth <= 768;
+      const isSmallMobile = window.innerWidth <= 480;
+      
+      // تعیین مقادیر اولیه و نهایی بر اساس نوع دستگاه
+      let initialScale, finalScale;
+      if (isSmallMobile) {
+        initialScale = 1.2;
+        finalScale = 1;
+      } else if (isMobile) {
+        initialScale = 1.3;
+        finalScale = 1;
+      } else {
+        initialScale = 1.8;
+        finalScale = 1;
+      }
+      
+      // محاسبه scale بر اساس میزان اسکرول
+      let scale;
+      if (scrollY <= 0) {
+        scale = initialScale;
+      } else if (scrollY >= maxScroll) {
+        scale = finalScale;
+      } else {
+        // محاسبه تدریجی scale
+        const progress = scrollY / maxScroll;
+        scale = initialScale - ((initialScale - finalScale) * progress);
+      }
+      
+      // اعمال scale به تصویر
+      hashtagImg.style.transform = `scale(${scale})`;
     }
 
     // تغییر کلاس فعال لینک‌های ناوبری

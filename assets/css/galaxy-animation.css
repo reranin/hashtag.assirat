@@ -1,0 +1,404 @@
+/* Galaxy Animation - Complete Redesign */
+.galaxy-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galaxy-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.galaxy-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.center-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Orbit Styles */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Individual Orbits - Static */
+.orbit-1 {
+    width: 200px;
+    height: 200px;
+}
+
+.orbit-2 {
+    width: 280px;
+    height: 280px;
+}
+
+.orbit-3 {
+    width: 360px;
+    height: 360px;
+}
+
+.orbit-4 {
+    width: 440px;
+    height: 440px;
+}
+
+.orbit-5 {
+    width: 520px;
+    height: 520px;
+}
+
+.orbit-6 {
+    width: 600px;
+    height: 600px;
+}
+
+.orbit-7 {
+    width: 680px;
+    height: 680px;
+}
+
+.orbit-8 {
+    width: 760px;
+    height: 760px;
+}
+
+/* Planet Styles */
+.planet {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.planet:hover {
+    transform: translateX(-50%) scale(1.2);
+    z-index: 5;
+}
+
+.planet-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.planet:hover .planet-image {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    border-color: #fff;
+}
+
+.planet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.planet-text {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.planet:hover .planet-text {
+    opacity: 1;
+}
+
+/* Planet Positions */
+.planet-1 {
+    transform-origin: 50% 100px;
+    animation: planet-orbit-1 20s linear infinite;
+}
+
+.planet-2 {
+    transform-origin: 50% 140px;
+    animation: planet-orbit-2 25s linear infinite;
+}
+
+.planet-3 {
+    transform-origin: 50% 180px;
+    animation: planet-orbit-3 30s linear infinite;
+}
+
+.planet-4 {
+    transform-origin: 50% 220px;
+    animation: planet-orbit-4 35s linear infinite;
+}
+
+.planet-5 {
+    transform-origin: 50% 260px;
+    animation: planet-orbit-5 40s linear infinite;
+}
+
+.planet-6 {
+    transform-origin: 50% 300px;
+    animation: planet-orbit-6 45s linear infinite;
+}
+
+.planet-7 {
+    transform-origin: 50% 340px;
+    animation: planet-orbit-7 50s linear infinite;
+}
+
+.planet-8 {
+    transform-origin: 50% 380px;
+    animation: planet-orbit-8 55s linear infinite;
+}
+
+/* Text Styles */
+.galaxy-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.galaxy-subtitle {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 60px;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+
+@keyframes center-pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Background Stars */
+.galaxy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 4s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Planet Orbit Animations - Fixed Profiles */
+@keyframes planet-orbit-1 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes planet-orbit-2 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(-360deg); }
+}
+
+@keyframes planet-orbit-3 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes planet-orbit-4 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(-360deg); }
+}
+
+@keyframes planet-orbit-5 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes planet-orbit-6 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(-360deg); }
+}
+
+@keyframes planet-orbit-7 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes planet-orbit-8 {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(-360deg); }
+}
+
+/* Counter-rotate planet images to keep them upright */
+.planet-image {
+    animation: counter-rotate-image 20s linear infinite;
+}
+
+.planet-1 .planet-image { animation: counter-rotate-image 20s linear infinite; }
+.planet-2 .planet-image { animation: counter-rotate-image 25s linear infinite reverse; }
+.planet-3 .planet-image { animation: counter-rotate-image 30s linear infinite; }
+.planet-4 .planet-image { animation: counter-rotate-image 35s linear infinite reverse; }
+.planet-5 .planet-image { animation: counter-rotate-image 40s linear infinite; }
+.planet-6 .planet-image { animation: counter-rotate-image 45s linear infinite reverse; }
+.planet-7 .planet-image { animation: counter-rotate-image 50s linear infinite; }
+.planet-8 .planet-image { animation: counter-rotate-image 55s linear infinite reverse; }
+
+@keyframes counter-rotate-image {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .galaxy-container {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .orbit-1 { width: 150px; height: 150px; }
+    .orbit-2 { width: 200px; height: 200px; }
+    .orbit-3 { width: 250px; height: 250px; }
+    .orbit-4 { width: 300px; height: 300px; }
+    .orbit-5 { width: 350px; height: 350px; }
+    .orbit-6 { width: 400px; height: 400px; }
+    .orbit-7 { width: 450px; height: 450px; }
+    .orbit-8 { width: 500px; height: 500px; }
+    
+    .planet {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .planet-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .planet-text {
+        font-size: 8px;
+    }
+    
+    .center-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .galaxy-title {
+        font-size: 2.5rem;
+    }
+    
+    .galaxy-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .planet-1 { transform-origin: 50% 75px; }
+    .planet-2 { transform-origin: 50% 100px; }
+    .planet-3 { transform-origin: 50% 125px; }
+    .planet-4 { transform-origin: 50% 150px; }
+    .planet-5 { transform-origin: 50% 175px; }
+    .planet-6 { transform-origin: 50% 200px; }
+    .planet-7 { transform-origin: 50% 225px; }
+    .planet-8 { transform-origin: 50% 250px; }
+}
+
+@media (max-width: 480px) {
+    .galaxy-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .orbit-1 { width: 120px; height: 120px; }
+    .orbit-2 { width: 160px; height: 160px; }
+    .orbit-3 { width: 200px; height: 200px; }
+    .orbit-4 { width: 240px; height: 240px; }
+    .orbit-5 { width: 280px; height: 280px; }
+    .orbit-6 { width: 300px; height: 300px; }
+    .orbit-7 { width: 340px; height: 340px; }
+    .orbit-8 { width: 380px; height: 380px; }
+    
+    .planet {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .planet-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .planet-text {
+        font-size: 7px;
+    }
+    
+    .center-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .galaxy-title {
+        font-size: 2rem;
+    }
+    
+    .galaxy-subtitle {
+        font-size: 1rem;
+    }
+    
+    .planet-1 { transform-origin: 50% 60px; }
+    .planet-2 { transform-origin: 50% 80px; }
+    .planet-3 { transform-origin: 50% 100px; }
+    .planet-4 { transform-origin: 50% 120px; }
+    .planet-5 { transform-origin: 50% 140px; }
+    .planet-6 { transform-origin: 50% 150px; }
+    .planet-7 { transform-origin: 50% 170px; }
+    .planet-8 { transform-origin: 50% 190px; }
+}
