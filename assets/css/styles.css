@@ -309,7 +309,7 @@ html, body {
 }
 
 .hero-description {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.75rem);
     color: var(--text-light);
     line-height: 1.8;
     max-width: 600px;
@@ -325,7 +325,7 @@ html, body {
 }
 
 .section-subtitle {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: var(--text-light);
     margin-bottom: 2rem;
 }
@@ -623,13 +623,13 @@ html, body {
 
 /* هشتگ 2: #إنا_علی_العهد - سبز */
 .hashtag-item:nth-child(2) {
-    animation-delay: -1s;
-    transform: translateY(-10px) rotate(-1deg);
-    --hashtag-color: #10b981;
-    --hashtag-gradient: linear-gradient(135deg, #10b981, #059669);
-    --hashtag-shadow: rgba(16, 185, 129, 0.3);
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.1) 100%);
-    border: 2px solid rgba(16, 185, 129, 0.2);
+    animation-delay: 0s;
+    transform: translateY(0px) rotate(2deg);
+    --hashtag-color: #1abce5;
+    --hashtag-gradient: linear-gradient(135deg, #1abce5, #0ea5e9);
+    --hashtag-shadow: rgba(26, 188, 229, 0.3);
+    background: linear-gradient(135deg, rgba(26, 188, 229, 0.15) 0%, rgba(14, 165, 233, 0.1) 100%);
+    border: 2px solid rgba(26, 188, 229, 0.2);
 }
 
 /* هشتگ 3: #وفقا_للمناسبات - نارنجی */
@@ -637,7 +637,7 @@ html, body {
     animation-delay: -2s;
     transform: translateY(5px) rotate(1.5deg);
     --hashtag-color: #f59e0b;
-    --hashtag-gradient: linear-gradient(135deg, #f59e0b, #d97706);
+    --hashtag-gradient: linear-gradient(135deg, #f59e0b, #e9cd32);
     --hashtag-shadow: rgba(245, 158, 11, 0.3);
     background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.1) 100%);
     border: 2px solid rgba(245, 158, 11, 0.2);
@@ -645,13 +645,13 @@ html, body {
 
 /* هشتگ 4: #محبة_الله - قرمز */
 .hashtag-item:nth-child(3) {
-    animation-delay: -3s;
-    transform: translateY(-5px) rotate(-0.5deg);
-    --hashtag-color: #ef4444;
-    --hashtag-gradient: linear-gradient(135deg, #ef4444, #dc2626);
-    --hashtag-shadow: rgba(239, 68, 68, 0.3);
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.1) 100%);
-    border: 2px solid rgba(239, 68, 68, 0.2);
+    animation-delay: 0s;
+    transform: translateY(0px) rotate(2deg);
+    --hashtag-color: #1abce5;
+    --hashtag-gradient: linear-gradient(135deg, #1abce5, #0ea5e9);
+    --hashtag-shadow: rgba(26, 188, 229, 0.3);
+    background: linear-gradient(135deg, rgba(26, 188, 229, 0.15) 0%, rgba(14, 165, 233, 0.1) 100%);
+    border: 2px solid rgba(26, 188, 229, 0.2);
 }
 
 /* هشتگ 5: #مداد - بنفش */
@@ -753,21 +753,6 @@ html, body {
     vertical-align: middle;
 }
 
-.hashtag-item:hover .hashtag-icon {
-    transform: scale(1.1) rotate(5deg);
-    filter: drop-shadow(0 6px 12px var(--hashtag-shadow, rgba(26, 188, 229, 0.5)));
-    animation-play-state: paused;
-}
-
-.hashtag-item:hover {
-    transform: translateY(-15px) scale(1.05) rotate(0deg);
-    box-shadow:
-        0 20px 60px var(--hashtag-shadow, rgba(0, 0, 0, 0.25)),
-        0 0 0 2px var(--hashtag-color, rgba(26, 188, 229, 0.4)),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    background: var(--hashtag-gradient, linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%));
-    animation-play-state: paused;
-}
 
 .hashtag {
     display: inline-block;
@@ -803,7 +788,7 @@ html, body {
 
 .hashtag-desc {
     color: var(--text-light);
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
     margin: 0;
     font-weight: 500;
     opacity: 0.8;
@@ -2008,7 +1993,10 @@ html {
 .scroll-item {
     font-size: 2.5rem;
     font-weight: 900;
-    color: #1abce5;
+    background: linear-gradient(135deg, #1abce5, #2ed5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 30px;
     opacity: 0;
     transform: translateY(100px);
