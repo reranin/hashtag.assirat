@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const iphone = document.querySelector(".iphone-mockup");
     const widgets = document.querySelectorAll(".widgets");
+    const animationTitle = document.querySelector(".animation-title");
     
     // Set initial states
     gsap.set(iphone, { scale: 0.75, opacity: 0 });
+    gsap.set(animationTitle, { opacity: 1 }); // Show title immediately
     gsap.set(widgets, { 
         opacity: 0, 
         scale: 0, 
@@ -19,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // iPhone animation function
     function iPhoneAnimation() {
-        const tl = gsap.timeline({ defaults: { duration: 1 } });
+        const tl = gsap.timeline({ defaults: { duration: 0.5 } });
         tl.to(iphone, { scale: 1, opacity: 1 })
-          .to(iphone, { duration: 3, scale: 1, opacity: 1 });
+          .to(iphone, { duration: 1, scale: 1, opacity: 1 });
         return tl;
     }
     
@@ -37,39 +39,39 @@ document.addEventListener('DOMContentLoaded', function() {
         // LEFT SIDE (5 widgets)
         {
             selector: "#hashtag-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: 350,
+            x: 100,
             y: -350,
             ease: "power4.out"
         },
         {
             selector: "#religious-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: 350,
+            x: 200,
             y: -200,
             ease: "power2.out"
         },
         {
             selector: "#calendar-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: 350,
+            x: 400,
             y: -50,
             ease: "power4.out"
         },
         {
             selector: "#love-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: 350,
+            x: 200,
             y: 100,
             ease: "power4.out"
         },
         {
             selector: "#culture-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
             x: 350,
             y: 250,
@@ -79,23 +81,23 @@ document.addEventListener('DOMContentLoaded', function() {
         // RIGHT SIDE (5 widgets) - Mirror positions
         {
             selector: "#guidance-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: -350,
-            y: -350,
+            x: -150,
+            y: -300,
             ease: "power4.out"
         },
         {
             selector: "#community-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: -350,
-            y: -200,
+            x: -100,
+            y: -100,
             ease: "power2.out"
         },
         {
             selector: "#analysis-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
             x: -350,
             y: -50,
@@ -103,17 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             selector: "#reflection-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: -350,
+            x: -180,
             y: 100,
             ease: "power4.out"
         },
         {
             selector: "#passion-widget",
-            duration: 3,
+            duration: 1,
             scale: 1,
-            x: -350,
+            x: -100,
             y: 250,
             ease: "power2.out"
         },
@@ -121,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Socials at top center
         {
             selector: "#socials",
-            duration: 3,
+            duration: 1,
             scale: 1.0,
             x: 350,
             y: 350,
@@ -129,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
     
-    const startTime = 2;
+    const startTime = 0.5;
     const masterTimeline = gsap.timeline();
     masterTimeline.add(iPhoneAnimation()).add(widgetAnimation(), startTime);
     
@@ -157,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     y: adjustedY, 
                     ease
                 }),
-                startTime + (index % 3) / 2
+                startTime + (index % 3) / 4
             );
         }
     });
@@ -166,10 +168,10 @@ document.addEventListener('DOMContentLoaded', function() {
     ScrollTrigger.create({
         animation: masterTimeline,
         trigger: ".iphone-widget-animation",
-        scrub: 1,
+        scrub: 0.3,
         pin: true,
         start: "top top",
-        end: "+=300%",
+        end: "+=100%",
         onComplete: function() {
             // Add cloud-like floating animation after main animation completes
             widgets.forEach((widget, index) => {
@@ -186,19 +188,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         x: `+=${randomX}`,
                         y: `+=${randomY}`,
                         rotation: randomRotation,
-                        duration: 4 + (index * 0.5),
+                        duration: 2 + (index * 0.3),
                         ease: "power2.inOut"
                     })
                     .to(widget, {
                         x: `+=${-randomX * 0.5}`,
                         y: `+=${-randomY * 0.3}`,
                         rotation: -randomRotation * 0.6,
-                        duration: 3 + (index * 0.3),
+                        duration: 1.5 + (index * 0.2),
                         ease: "power1.inOut"
                     });
                 
                 // Start animation with delay
-                floatAnimation.delay(index * 0.3);
+                floatAnimation.delay(index * 0.1);
             });
         }
     });
@@ -214,18 +216,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add click effects for image widgets
+    // Add click effects for image widgets - DISABLED
     const imageWidgets = document.querySelectorAll('.image-widget');
     imageWidgets.forEach(widget => {
-        widget.addEventListener('click', function() {
-            // Add click animation
-            gsap.to(this, { scale: 15, duration: 0.1, yoyo: true, repeat: 1 });
-            
-            // You can add more functionality here if needed
-            console.log('Image widget clicked:', this.id);
-        });
+        // Remove click animation to prevent image scaling
+        // widget.addEventListener('click', function() {
+        //     // Add click animation
+        //     gsap.to(this, { scale: 15, duration: 0.1, yoyo: true, repeat: 1 });
+        //     
+        //     // You can add more functionality here if needed
+        //     console.log('Image widget clicked:', this.id);
+        // });
         
-        // Add cursor pointer
-        widget.style.cursor = 'pointer';
+        // Remove cursor pointer since clicking is disabled
+        widget.style.cursor = 'default';
     });
 });
