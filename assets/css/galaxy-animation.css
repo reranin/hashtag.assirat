@@ -125,6 +125,45 @@
     object-fit: cover;
 }
 
+/* Planet Tooltip */
+.planet-tooltip {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.planet-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.9);
+}
+
+.planet:hover .planet-tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px;
+}
+
 .planet-text {
     color: white;
     font-size: 10px;
@@ -195,9 +234,69 @@
 .galaxy-subtitle {
     text-align: center;
     color: #ccc;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     font-size: 1.3rem;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Galaxy CTA Button */
+.galaxy-cta {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.galaxy-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #1abce5 0%, #0d6efd 50%, #1abce5 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px rgba(26, 188, 229, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.galaxy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.galaxy-button:hover::before {
+    left: 100%;
+}
+
+.galaxy-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(26, 188, 229, 0.6);
+    background: linear-gradient(135deg, #0d6efd 0%, #1abce5 50%, #0d6efd 100%);
+}
+
+.galaxy-button i {
+    font-size: 1.3rem;
+    animation: rocket-pulse 2s ease-in-out infinite;
+}
+
+@keyframes rocket-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* Animations */
@@ -341,6 +440,15 @@
         font-size: 1.1rem;
     }
     
+    .galaxy-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .galaxy-button i {
+        font-size: 1.1rem;
+    }
+    
     .planet-1 { transform-origin: 50% 75px; }
     .planet-2 { transform-origin: 50% 100px; }
     .planet-3 { transform-origin: 50% 125px; }
@@ -390,6 +498,15 @@
     }
     
     .galaxy-subtitle {
+        font-size: 1rem;
+    }
+    
+    .galaxy-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .galaxy-button i {
         font-size: 1rem;
     }
     

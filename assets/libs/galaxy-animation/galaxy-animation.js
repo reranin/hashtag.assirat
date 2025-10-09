@@ -22,8 +22,7 @@ class GalaxyAnimation {
             this.planets = document.querySelectorAll('.planet');
             
             if (this.planets.length === 0) {
-                console.warn('⚠️ No planets found, retrying in 1 second...');
-                setTimeout(() => this.setupAnimation(), 1000);
+                console.log('ℹ️ Galaxy Animation section is disabled - no planets found');
                 return;
             }
 
